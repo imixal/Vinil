@@ -1,0 +1,5 @@
+D:\appsys\Vinil\Model\bin\Debug\Model.dll
+D:\appsys\Vinil\Model\bin\Debug\Model.pdb
+D:\appsys\Vinil\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\appsys\Vinil\Model\obj\Debug\Model.dll
+D:\appsys\Vinil\Model\obj\Debug\Model.pdb
