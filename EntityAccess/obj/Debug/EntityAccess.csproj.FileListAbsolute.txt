@@ -7,3 +7,4 @@ D:\appsys\Vinil\EntityAccess\bin\Debug\EntityFramework.xml
 D:\appsys\Vinil\EntityAccess\bin\Debug\EntityFramework.SqlServer.xml
 D:\appsys\Vinil\EntityAccess\obj\Debug\EntityAccess.dll
 D:\appsys\Vinil\EntityAccess\obj\Debug\EntityAccess.pdb
+D:\appsys\Vinil\EntityAccess\obj\Debug\EntityAccess.csprojResolveAssemblyReference.cache

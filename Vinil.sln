@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityAccess", "EntityAcces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbAdmin", "DbAdmin\DbAdmin.csproj", "{D051ECEF-D8C6-41F8-BCCA-84FB9906D1A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{AF82FA88-CEB7-49EB-BB72-4C5C5AFB1257}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D051ECEF-D8C6-41F8-BCCA-84FB9906D1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D051ECEF-D8C6-41F8-BCCA-84FB9906D1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D051ECEF-D8C6-41F8-BCCA-84FB9906D1A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF82FA88-CEB7-49EB-BB72-4C5C5AFB1257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF82FA88-CEB7-49EB-BB72-4C5C5AFB1257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF82FA88-CEB7-49EB-BB72-4C5C5AFB1257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF82FA88-CEB7-49EB-BB72-4C5C5AFB1257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

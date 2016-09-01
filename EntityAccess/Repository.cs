@@ -38,6 +38,10 @@ namespace EntityAccess
         {
             return Context.Set<T>();
         }
+        public void DeleteAll(string tablename)
+        {
+            Context.Database.ExecuteSqlCommand("TRUNCATE TABLE["+tablename+"]");
+        }
     }
 }
 

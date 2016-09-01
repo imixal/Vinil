@@ -2,8 +2,10 @@
 using Data_Access_Layer.Repository;
 using Data_Access_Layer.UnitOfWork;
 using Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,37 +17,33 @@ namespace DbAdmin
         
         static void Main(string[] args)
         {
-            for (;;)
+            List<Vinil> vinils = new List<Vinil>() ;
+            using (StreamReader sr = new StreamReader("data.txt", System.Text.Encoding.Default))
             {
-                Console.WriteLine("add or show");
-                var temp = Console.ReadLine();
-                if (temp == "add") AddM();
-                else if(temp == "show") ShowDB();
-
-            }
-        }
-        static private void ShowDB()
-        {
-            using (UnitOfWork uow = new UnitOfWork())
-            {
-                var list = uow.Vinils.GetAll();
-                foreach(var item in list)
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    Console.WriteLine(item.Name);
+                    Vinil newVinil = JsonConvert.DeserializeObject<Vinil>(line);
+                    vinils.Add(newVinil);
                 }
             }
-        }
-        static private void AddM()
-        {
-
             using (UnitOfWork uow = new UnitOfWork())
-            { 
-                Vinil disk = new Vinil();
-                Console.WriteLine("Name");
-                disk.Name = Console.ReadLine();
-                uow.Vinils.Add(disk);
+            {
+                uow.Vinils.DeleteAll("Vinils");
+                foreach (var item in vinils)
+                {
+                    uow.Vinils.Add(item);
+                }
                 uow.Save();
             }
+            for (;;)
+            {
+                Console.WriteLine("database update");
+                var temp = Console.ReadLine();
+                
+            }
         }
+
+
     }
 }

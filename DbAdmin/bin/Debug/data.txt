@@ -1,0 +1,3 @@
+{"Name":"The Beatles - A Taste Of Honey", "Artist":"The Beatles","Album":"A Taste Of Honey", "Style":"Rock,Rock and roll","Price":"50","Image":""}
+{"Name":"Metallica - Master of Puppets", "Artist":"Metallica","Album":"Master of Puppets", "Style":"Hard Rock, Rock, Heavy Metal","Price":"55","Image":""}
+{"Name":"Metallica …And Justice for All", "Artist":"Metallica","Album":"…And Justice for All", "Style":"Hard Rock, Rock, Heavy Metal","Price":"55","Image":""}

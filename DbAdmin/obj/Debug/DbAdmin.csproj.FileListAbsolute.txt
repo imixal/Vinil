@@ -14,3 +14,5 @@ D:\appsys\Vinil\DbAdmin\bin\Debug\EntityFramework.SqlServer.xml
 D:\appsys\Vinil\DbAdmin\obj\Debug\DbAdmin.csprojResolveAssemblyReference.cache
 D:\appsys\Vinil\DbAdmin\obj\Debug\DbAdmin.exe
 D:\appsys\Vinil\DbAdmin\obj\Debug\DbAdmin.pdb
+D:\appsys\Vinil\DbAdmin\bin\Debug\Newtonsoft.Json.dll
+D:\appsys\Vinil\DbAdmin\bin\Debug\Newtonsoft.Json.xml
