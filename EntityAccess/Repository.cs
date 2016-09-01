@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityAccess
 {
-    public class Repository<T> 
+    public class Repository<T>
         where T : Entity
     {
         protected readonly DbContext Context;
@@ -34,29 +34,7 @@ namespace EntityAccess
         {
             Context.Entry(entity).State = EntityState.Deleted;
         }
-
-        public async Task<IReadOnlyCollection<T>> GetAllAsync()
-        {
-            return await GetAllQuery().ToListAsync();
-        }
-
-        public async Task<IReadOnlyCollection<T>> GetWhereAsync(Expression<Func<T, bool>> predicate)
-        {
-            return await GetAllQuery().Where(predicate).ToListAsync();
-        }
-
-        public async Task<T> GetById(int id)
-        {
-            return await GetAllQuery().SingleOrDefaultAsync(entity => entity.Id == id);
-        }
-
-
-        protected virtual IQueryable<T> GetAllQuery()
-        {
-            return GetQuery();
-        }
-
-        protected IQueryable<T> GetQuery()
+        public IQueryable<T> GetAll()
         {
             return Context.Set<T>();
         }

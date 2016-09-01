@@ -1,4 +1,5 @@
-﻿using EntityAccess;
+﻿using Data_Access_Layer.Interfaces;
+using EntityAccess;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -9,14 +10,12 @@ using System.Threading.Tasks;
 
 namespace Data_Access_Layer.Repository
 {
-    class VinilRepository : Repository<Vinil>
+    public class VinilRepository : Repository<Vinil>, IRepository<Vinil>
     {
         public VinilRepository(DbContext context)
            : base(context)
         {
 
         }
-              
-
     }
 }

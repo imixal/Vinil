@@ -16,7 +16,7 @@ namespace Data_Access_Layer
 
         public Context(): base(DbConnectionStringName)
         {
-
+                
         }
     }
 }
