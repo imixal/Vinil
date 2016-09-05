@@ -3,42 +3,57 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    <nav >
+        <div class="col-lg-offset-7 col-md-offset-6 col-sm-12">
+            @using Microsoft.AspNet.Identity
+            @if (Request.IsAuthenticated)
+            {
+                <ul id="main-menu">
+                    <li class="point-menu">@Html.ActionLink("Главная", "Index","Home")</li>
+                    <li class="point-menu">Добро пожаловать, <strong>@User.Identity.GetUserName()</strong></li>
+                    <li class="point-menu" id="basket"><span class="glyphicon glyphicon-shopping-cart"></span></li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="point-menu">@Html.ActionLink("Добавить", "Add")</li>}
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "point-menu" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <li class="point-menu"><a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a></li>
+                    }
                 </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+            }
+            else
+            {
+                <ul id="main-menu">
+                    <li class="point-menu">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                    <li class="point-menu">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                </ul>
+            }
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
+        <hr /> 
+
+</nav>   
+    <div id="basketview"><h2>Корзина</h2>
+        
+    </div>
+    
+      <section>  @RenderBody()</section>
+    
+        
+    <footer></footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script  src="~/Scripts/jquery-ui-1.12.0.min.js"></script>
+    <script src="~/Scripts/myscript.js"></script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

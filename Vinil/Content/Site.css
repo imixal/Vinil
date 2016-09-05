@@ -1,24 +1,260 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Override the default bootstrap behavior where horizontal description lists 
+﻿/* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
     white-space: normal;
+    
+}
+body{
+    overflow-x:hidden;
+}
+h1,h2,h3,h4,h5,h6,p,div,a,label{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+}
+h1{
+    font-weight:700;
+    font-size: 3em;
+}
+h2{
+    font-size:  1.1em;
+    text-align:center;
+    font-weight:700;
+}
+h5{
+    font-size:2em;
+    font-weight:700;
+    margin-bottom:30px;
+}
+p{
+    margin:0;
+}
+nav{
+    width:100%;
+    background-color:#fff;
+    position:fixed;
+    height:75px;
+    padding-top:25px;
+    z-index:20;
+}
+section{
+       padding-top:50px;
+}
+#main-menu{
+    list-style:none;
+    display:inline;
+}
+.point-menu{
+    display:inline;
+    margin:5px;
+    font-size:1em;
+    font-family: 'PT Sans', sans-serif;
+}
+.point-menu span{
+    font-size:1.2em;
+}
+.point-menu a:hover{
+    cursor:pointer;
+}
+.point-menu a{
+    color:#000;
+    font-family: 'PT Sans', sans-serif;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+
+#loginForm{
+    padding-top:50px;
+    text-align:center;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+
+.vinil-wrapper{
+    position:relative;
+    padding:10px;
+}
+.vinil{
+    overflow:hidden;
+    height:450px;
+    padding:5px;
+    box-sizing:padding-box;
+    border:1px solid #eeeeee;
+}
+#basket:hover{
+    cursor:pointer;
+}
+#basketview{
+    background-color:#fff;
+    padding:10px;
+    border:1px solid #eeeeee;
+    position:fixed;
+    top:70px;
+    right:-300px;
+    height:400px;
+    width:300px;
+    overflow-y:scroll;
+    z-index:11;
+    
+}
+.mini-vinil{
+    position:relative;
+    overflow:hidden;
+    padding:5px;
+    width:100%;
+    height:70px;
+    margin-bottom:20px;
+    border:1px solid #eeeeee;
+}
+.mini-vinil p, .mini-vinil img{
+    display:inline;
+}
+.mini-vinil img{
+   
+}
+.mini-vinil span{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+.mini-vinil span:hover{
+    cursor:pointer;
+}
+.mini-vinil p{
+    margin-left:10px;
+    font-size:0.8em;
+}
+.basket{
+    padding-top:10px;
+    top:-55px;
+    position:absolute;
+    position:relative;
+    color:#fff;
+    height:50px;
+    width:100%;
+    z-index:10;
+    background-color:#e50019;
+}
+.basket:hover{
+    cursor:pointer;
+}
+.basket span,.basket p{
+
+    text-align:center;
+    font-size:1.2em;
+}
+
+.price{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    color:#0071bc;
+    
+}
+.price p{
+
+    font-weight:700;
+    font-size:2em;
+}
+.panel{
+    border:0px;
+}
+.panel-default > .panel-heading{
+    background-color:transparent;
+}
+.panel-control{
+    padding:0;
+}
+.panel-heading{
+    border:0px;
+}
+.panel-body{
+    border:0;
+}
+h4 a{
+    font-size:1.5em;
+    font-weight:700;
+    text-decoration:none;
+}
+label
+{
+    line-height: 18px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.control-bar, .control-bar a {
+    text-align:center;
+    font-size:1.2em;
+}
+.control-bar:hover{
+    cursor:pointer;
+}
+input[type='checkbox']
+{
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.checkbox-wrapper{
+    height:30px;
+    padding:5px;
+    margin:10px;
+
+}
+.checkbox-wrapper:hover{
+    background-color:#0071bc;
+    color:#fff;
+    border-radius:5px;
+}
+input[type='checkbox']:after
+{
+    font-size: 0;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    content: '';
+    -webkit-transition: all .1s linear;
+       -moz-transition: all .1s linear;
+            transition: all .1s linear;
+    text-align: center;
+
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 2px;
+    background-color: #fff;
+
+    box-sizing: border-box;
+}
+
+input[type='checkbox']:checked:after
+{
+    font-size: 18px;
+
+    background-color: #0071bc;
+            text-shadow: 1px 1px 0 #05a4c1;
+
+    -webkit-text-shadow: 1px 1px 0 #05a4c1;
+       -moz-text-shadow: 1px 1px 0 #05a4c1;
+}
+.control-bar-wrapper p{
+    font-size:1.2em;
+}
+.control-bar-wrapper{
+    padding-top:50px;
+}
+footer{
+    margin-top:100px;
 }

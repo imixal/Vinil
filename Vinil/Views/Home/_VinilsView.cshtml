@@ -1,0 +1,33 @@
+﻿<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+    @if (ViewBag.vinils.Count == 0)
+    {
+        <h5>Ничего не найдено</h5>
+    }
+    else
+    {
+        foreach (var vinil in ViewBag.vinils)
+        {
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 vinil-wrapper">
+            <div class="vinil">
+                <div class="basket">
+                    
+                    <p><span class="glyphicon glyphicon-shopping-cart"></span>В КОРЗИНУ</p>
+                </div>
+                @if (vinil.Image != "" && vinil.Image != null)
+                {
+                    <img class="img-responsive" src="~/image/@vinil.Image" />
+                }
+                else
+                {
+                    <img class="img-responsive" src="~/image/template.png" />
+                }
+                <h2>@vinil.Name</h2>
+                <p>Исполнитель: <strong>@vinil.Artist</strong></p>
+                <p>Альбом:<strong> @vinil.Album</strong></p>
+                <p>Стиль:<strong> @vinil.Styles</strong></p>
+                <div class="price"><p>@vinil.Price $ </p></div>
+            </div>
+        </div>
+        }
+    }
+</div>

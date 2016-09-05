@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-offset-5 col-lg-2">
+    <h5>Вы добавили пластинку:</h5>
+    <div class=" vinil-wrapper">
+        <div class="vinil">
+            @if (ViewBag.vinil.Image != "" && ViewBag.vinil.Image !=null)
+            {
+                <img class="img-responsive" src="~/image/@ViewBag.vinil.Image" />
+            }
+            else
+            {
+                <img class="img-responsive" src="~/image/template.png" />
+            }
+            <h2>@ViewBag.vinil.Name</h2>
+            <p>Исполнитель: <strong>@ViewBag.vinil.Artist</strong></p>
+            <p>Альбом:<strong> @ViewBag.vinil.Album</strong></p>
+            <div class="price"><p>@ViewBag.vinil.Price $ </p></div>
+        </div>
+    </div>
+    <h5>@Html.ActionLink("Главная", "Index", "Home")</h5>
+</div>
+

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-4" style="margin-top:50px;">
+            <h5>Добавление Пластинки</h5>
+            @using (Html.BeginForm("Add", "Home", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <label for="Name">Введите Название</label>
+                    <input id="Name" type="text" class="form-control" name="Name" placeholder="Какой-то текст">
+                </div>
+                <div class="form-group">
+                    <label for="Artist">Введите Исполнителя</label>
+                    <input id = "Artist" type= "text" class="form-control" name="Artist" placeholder="Какой-то текст">
+                </div>
+                <div class="form-group">
+                    <label for="Album">Введите Альбом</label>
+                    <input id="Album" type="text" class="form-control" name="Album" placeholder="Какой-то текст">
+                </div>
+                <div class="form-group">
+                    <label for="Style">Введите Стили через запятую</label>
+                    <input id="Style" type="text" class="form-control" name="Styles" placeholder="Какой-то текст">
+                </div>
+                <div class="form-group">
+                    <label for="Price">Введите Стоимость</label>
+                    <input id="Price" type="text" class="form-control" name="Price" placeholder="Какой-то текст">
+                </div>
+                <input type="submit" class="btn btn-default"/>
+            }
+        </div>
+    </div>
+</div>
+
+

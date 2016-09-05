@@ -1,3 +1,13 @@
-{"Name":"The Beatles - A Taste Of Honey", "Artist":"The Beatles","Album":"A Taste Of Honey", "Style":"Rock,Rock and roll","Price":"50","Image":""}
-{"Name":"Metallica - Master of Puppets", "Artist":"Metallica","Album":"Master of Puppets", "Style":"Hard Rock, Rock, Heavy Metal","Price":"55","Image":""}
-{"Name":"Metallica …And Justice for All", "Artist":"Metallica","Album":"…And Justice for All", "Style":"Hard Rock, Rock, Heavy Metal","Price":"55","Image":""}
+{"Name":"The Beatles - A Taste Of Honey", "Artist":"The Beatles","Album":"A Taste Of Honey", "Styles":"Rock and roll","Price":15,"Image":""}
+{"Name":"The Beatles - Mono Masters", "Artist":"The Beatles","Album":"Mono Masters", "Styles":"Rock and roll","Price":17,"Image":"beatles_monomasters.png"}
+{"Name":"Queen - You Don't Fool Remixes", "Artist":"Queen","Album":"Remixes", "Styles":"Rock and roll","Price":15,"Image":"queen-you-don-t-fool-me-the-remixes.png"}
+{"Name":"Metallica - Master of Puppets", "Artist":"Metallica","Album":"Master of Puppets", "Styles":"Hard Rock","Price":9,"Image":""}
+{"Name":"Metallica …And Justice for All", "Artist":"Metallica","Album":"…And Justice for All", "Styles":"Hard Rock","Price":13,"Image":""}
+{"Name":"Slipknot Deluxe", "Artist":"Slipknot","Album":"Surfacing", "Styles":"Heavy Metal","Price":13,"Image":"Slipknot_Psychosocial_vinyl.png"}
+{"Name":"Slipknot Japan Edition", "Artist":"Slipknot","Album":"Surfacing", "Styles":"Heavy Metal","Price":13,"Image":""}
+{"Name":"The Beatles London LIFE", "Artist":"The Beatles","Album":"A Taste Of Honey", "Styles":"Rock and roll","Price":17,"Image":"the-beatles-in-the-beginning.png"}
+{"Name":"Queen Forever", "Artist":"Queen","Album":"Show must go on", "Styles":"Rock","Price":15,"Image":"queenforever.png"}
+{"Name":"Высоцкий Владимир", "Artist":"Высоцкий","Album":"Живой", "Styles":"Rock","Price":26,"Image":"vishel.png"}
+{"Name":"Зарядка", "Artist":"Высоцкий","Album":"Живой", "Styles":"Rock","Price":24,"Image":"vishel.png"}
+{"Name":"Slipknot Deluxe Edition", "Artist":"Slipknot","Album":"Surfacing", "Styles":"Heavy Metal","Price":15,"Image":""}
+{"Name":"Metallica The Dest", "Artist":"Metallica","Album":"…And Justice for All", "Styles":"Hard Rock","Price":20,"Image":""}

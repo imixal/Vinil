@@ -66,3 +66,10 @@ D:\appsys\Vinil\Vinil\bin\Microsoft.Owin.Security.Twitter.xml
 D:\appsys\Vinil\Vinil\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\appsys\Vinil\Vinil\obj\Debug\Vinil.dll
 D:\appsys\Vinil\Vinil\obj\Debug\Vinil.pdb
+D:\appsys\Vinil\Vinil\obj\Debug\Vinil.csprojResolveAssemblyReference.cache
+D:\appsys\Vinil\Vinil\bin\Model.dll
+D:\appsys\Vinil\Vinil\bin\Service.dll
+D:\appsys\Vinil\Vinil\bin\Data Access Layer.dll
+D:\appsys\Vinil\Vinil\bin\Model.pdb
+D:\appsys\Vinil\Vinil\bin\Service.pdb
+D:\appsys\Vinil\Vinil\bin\Data Access Layer.pdb

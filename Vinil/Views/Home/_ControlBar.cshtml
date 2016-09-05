@@ -1,0 +1,32 @@
+﻿
+
+    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-4 control-bar">
+        <select id="Order" class="form-control">
+            <option disabled selected>Сортировка</option>
+            <option>Возрастание</option>
+            <option>Убывание</option>
+        </select>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-4 ">
+        <p class="control-bar">
+            Показывать:
+            @*@if (ViewBag.page <= 0)
+            {
+                ViewBag.pageback = ViewBag.page-1;
+                <a class="pagenator"> @ViewBag.pageback</a>
+            }
+            <a class="pagenator">@ViewBag.page</a>
+            @if (ViewBag.vinils.Count <= ViewBag.count)
+            {
+                 ViewBag.pagenext = ViewBag.page+1;
+                 <a class="pagenator">@ViewBag.pagenext</a>
+            }*@
+        </p>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-5 col-xs-4">
+        <select id="Count" class="form-control">
+            <option selected>6</option>
+            <option>12</option>
+            <option>18</option>
+        </select>
+    </div>

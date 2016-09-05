@@ -1,44 +1,48 @@
 ﻿using Data_Access_Layer.Repository;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data_Access_Layer.UnitOfWork
 {
     public class UnitOfWork : IDisposable
     {
-        private Context db = new Context();
-        private VinilRepository vinilRepository;
+        private Context _db;
+        private bool _disposed = false;
+        private VinilRepository _vinilRepository;
+
         public VinilRepository Vinils
         {
             get
             {
-                if(vinilRepository == null)
+                if (_vinilRepository == null)
                 {
-                    vinilRepository = new VinilRepository(db);
+                    _vinilRepository = new VinilRepository(_db);
                 }
-                return vinilRepository;
+                return _vinilRepository;
             }
         }
+
+        public UnitOfWork()
+        {
+            _db = new Context();
+        }
+
         public void Save()
         {
-            db.SaveChanges();
+            _db.SaveChanges();
         }
-        private bool disposed = false;
 
         public virtual void Dispose(bool disposing)
         {
-            if (!this.disposed)
+            if (!this._disposed)
             {
                 if (disposing)
                 {
-                    db.Dispose();
+                    _db.Dispose();
                 }
-                this.disposed = true;
+                this._disposed = true;
             }
         }
+
         public void Dispose()
         {
             Dispose(true);

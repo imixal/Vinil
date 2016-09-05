@@ -51,7 +51,14 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IVinilRepository.cs" />
+    <Compile Include="Migrations\201609021238063_InitialMigrate.cs" />
+    <Compile Include="Migrations\201609021238063_InitialMigrate.Designer.cs">
+      <DependentUpon>201609021238063_InitialMigrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\VinilRepository.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
@@ -60,16 +67,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntityAccess\EntityAccess.csproj">
-      <Project>{8343728a-3b21-472c-960b-c286df4e5505}</Project>
-      <Name>EntityAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{222d837b-21e8-49f1-85dc-8feed3dcbc43}</Project>
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609021238063_InitialMigrate.resx">
+      <DependentUpon>201609021238063_InitialMigrate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
